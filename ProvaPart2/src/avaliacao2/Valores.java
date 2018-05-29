@@ -6,15 +6,14 @@ import java.util.List;
 public class Valores implements ValoresITF{
 	
 	public List<Integer> valores = new ArrayList<>();
-	
-	
+		
 	@Override
 	public boolean ins(int v) {
-		if(valores.size()>9) {
+		if(valores.size()<=9) {
 			valores.add(v);
 			return true;
 		}else {
-			return false;
+			return false;			
 		}
 	}
 
@@ -39,7 +38,11 @@ public class Valores implements ValoresITF{
 		if(valores.size()==0) {
 			return 0;
 		}else {
-			return -1;
+			double soma=0;
+			for(int i=0;i>valores.size();i++) {
+				soma = soma + valores.size();
+			}
+			return (soma/valores.size());
 		}
 	}
 
@@ -59,5 +62,6 @@ public class Valores implements ValoresITF{
 		}else {
 			return 0;
 		}
-	}	
+	}
+	
 }
