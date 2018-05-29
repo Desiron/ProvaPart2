@@ -1,0 +1,52 @@
+package avaliacao2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Valores implements ValoresITF{
+	
+	public List<Integer> valores = new ArrayList<>();
+	
+	
+	@Override
+	public boolean ins(int v) {
+		if(valores.size()>9) {
+			valores.add(v);
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	@Override
+	public int del(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double mean() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int greater() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int lower() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+}
