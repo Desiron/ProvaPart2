@@ -39,8 +39,8 @@ public class Valores implements ValoresITF{
 			return 0;
 		}else {
 			double soma=0;
-			for(int i=0;i>valores.size();i++) {
-				soma = soma + valores.size();
+			for(int i=0;i<valores.size();i++) {
+				soma = soma + valores.get(i);
 			}
 			return (soma/valores.size());
 		}
@@ -51,7 +51,13 @@ public class Valores implements ValoresITF{
 		if(valores.size()==0) {
 			return -1;
 		}else {
-			return 0;
+			int maiorValor = valores.get(0);
+			for (Integer A : valores) {
+				if (A > maiorValor) {
+					maiorValor = A;
+				}
+			}
+			return maiorValor;
 		}
 	}
 
@@ -60,7 +66,13 @@ public class Valores implements ValoresITF{
 		if(valores.size()==0) {
 			return -1;
 		}else {
-			return 0;
+			int maiorValor = valores.get(0);
+			for (Integer A : valores) {
+				if (A < maiorValor) {
+					maiorValor = A;
+				}
+			}
+			return maiorValor;
 		}
 	}
 	
